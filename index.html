@@ -2,42 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-    <title>AHA Power Solutions Catalogue</title>
-      <style>
-          body { font-family: Arial, sans-serif; margin: 20px; }
-              .product { border: 1px solid #ccc; padding: 15px; width: 300px; }
-                  .product img { width: 100%; height: auto; }
-                      .options { margin-top: 10px; }
-                          .price { margin-top: 10px; font-weight: bold; color: green; }
-                              button { margin: 5px 0; padding: 8px; width: 100%; }
-                                </style>
-                                </head>
-                                <body>
-                                  <h1>AHA Power Solutions Catalogue</h1>
+  <title>AHA Power Solutions Catalogue</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+    }
+    .catalogue {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 320px;
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .product-card h2 {
+      margin: 15px 0 10px;
+      color: #1b5e20;
+    }
+    .options {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .options button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #2e7d32;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .options button:hover {
+      background: #1b5e20;
+    }
+    .price {
+      margin-top: 15px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #388e3c;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>AHA Power Solutions Catalogue</h1>
 
-                                    <div class="product">
-                                        <h2>Deye 8kW Inverter</h2>
-                                            <!-- Replace the src below with the actual photo URL of the Deye 8kW inverter -->
-                                                <img src="https://example.com/deye-8kw-inverter.jpg" alt="Deye 8kW Inverter">
+  <div class="catalogue">
+    <div class="product-card">
+      <img src="https://example.com/deye-8kw-inverter.jpg" alt="Deye 8kW Inverter">
+      <h2>Deye 8kW Inverter</h2>
+      <p>Reliable solar inverter for residential and commercial installations.</p>
+      
+      <div class="options">
+        <button onclick="showPrice('6')">6 Panels</button>
+        <button onclick="showPrice('8')">8 Panels</button>
+      </div>
+      
+      <div id="priceDisplay" class="price"></div>
+    </div>
+  </div>
 
-                                                    <div class="options">
-                                                          <button onclick="showPrice('6')">6 Panels</button>
-                                                                <button onclick="showPrice('8')">8 Panels</button>
-                                                                    </div>
-
-                                                                        <div id="priceDisplay" class="price"></div>
-                                                                          </div>
-
-                                                                            <script>
-                                                                                function showPrice(option) {
-                                                                                      let priceText = '';
-                                                                                            if (option === '6') {
-                                                                                                    priceText = 'Price: R90,000';
-                                                                                                          } else if (option === '8') {
-                                                                                                                  priceText = 'Price: R10,000';
-                                                                                                                        }
-                                                                                                                              document.getElementById('priceDisplay').innerText = priceText;
-                                                                                                                                  }
-                                                                                                                                    </script>
-                                                                                                                                    </body>
-                                                                                                                                    </html>
+  <script>
+    function showPrice(option) {
+      let priceText = '';
+      if (option === '6') {
+        priceText = 'Price: R90,000';
+      } else if (option === '8') {
+        priceText = 'Price: R10,000';
+      }
+      document.getElementById('priceDisplay').innerText = priceText;
+    }
+  </script>
+</body>
+</html>
