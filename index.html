@@ -2,101 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AHA Power Solutions Catalogue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angi's Bakery</title>
   <style>
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000; /* Black background */
+      color: #fff; /* White text */
+    }
+    header {
+      background-color: #004080; /* Deep blue */
       padding: 20px;
-      color: #333;
-      background: url('https://share.google/5xSCFE2cLVrkUC6fK') no-repeat center center fixed;
-      background-size: cover;
-    }
-    h1 {
       text-align: center;
-      color: #fff;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
-    .catalogue {
+    header h1 {
+      margin: 0;
+      color: #fff;
+    }
+    nav {
+      background-color: #00264d;
       display: flex;
       justify-content: center;
-      margin-top: 30px;
-    }
-    .product-card {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      width: 320px;
-      padding: 20px;
-      transition: transform 0.2s ease;
-    }
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-    .product-card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .product-card h2 {
-      margin: 15px 0 10px;
-      color: #1b5e20;
-    }
-    .options {
-      display: flex;
-      gap: 10px;
-      margin-top: 15px;
-    }
-    .options button {
-      flex: 1;
       padding: 10px;
-      border: none;
-      border-radius: 6px;
-      background: #2e7d32;
+    }
+    nav a {
       color: #fff;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-    .options button:hover {
-      background: #1b5e20;
-    }
-    .price {
-      margin-top: 15px;
-      font-size: 1.2em;
+      text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
-      color: #388e3c;
+    }
+    nav a:hover {
+      color: #66ccff;
+    }
+    section {
+      padding: 40px;
       text-align: center;
+    }
+    .button {
+      background-color: #004080;
+      color: #fff;
+      padding: 15px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .button:hover {
+      background-color: #66ccff;
+      color: #000;
+    }
+    .menu-item {
+      margin: 15px 0;
+      font-size: 18px;
+    }
+    footer {
+      background-color: #00264d;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  <h1>AHA Power Solutions Catalogue</h1>
 
-  <div class="catalogue">
-    <div class="product-card">
-      <img src="https://example.com/deye-8kw-inverter.jpg" alt="Deye 8kW Inverter">
-      <h2>Deye 8kW Inverter</h2>
-      <p>Reliable solar inverter for residential and commercial installations.</p>
-      
-      <div class="options">
-        <button onclick="showPrice('6')">6 Panels</button>
-        <button onclick="showPrice('8')">8 Panels</button>
-      </div>
-      
-      <div id="priceDisplay" class="price"></div>
-    </div>
-  </div>
+  <header>
+    <h1>Angi's Bakery</h1>
+  </header>
 
-  <script>
-    function showPrice(option) {
-      let priceText = '';
-      if (option === '6') {
-        priceText = 'Price: R90,000';
-      } else if (option === '8') {
-        priceText = 'Price: R10,000';
-      }
-      document.getElementById('priceDisplay').innerText = priceText;
-    }
-  </script>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to Angi's Bakery</h2>
+    <p>Where passion meets flavor. We bake with love, and every bite tells a story.</p>
+    <blockquote>"Cooking is like love. It should be entered into with abandon or not at all." – Harriet Van Horne</blockquote>
+    <blockquote>"Good food is the foundation of genuine happiness." – Auguste Escoffier</blockquote>
+    <a href="#menu" class="button">View Our Menu</a>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-item">Chocolate Cake - R120</div>
+    <div class="menu-item">Blueberry Muffins (6 pack) - R60</div>
+    <div class="menu-item">Fresh Croissants - R25 each</div>
+    <div class="menu-item">Red Velvet Cupcakes (4 pack) - R80</div>
+    <div class="menu-item">Artisan Bread Loaf - R40</div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Call us at: <strong>+27 82 444 6481</strong></p>
+    <a href="mailto:info@angisbakery.com" class="button">Message Us</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Angi's Bakery. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
